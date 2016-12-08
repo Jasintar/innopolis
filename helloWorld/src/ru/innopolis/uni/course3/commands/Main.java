@@ -2,13 +2,14 @@ package ru.innopolis.uni.course3.commands;
 
 
 import java.io.*;
+import java.util.List;
 import java.util.Scanner;
 
 /**
  * Created by julia on 07.12.2016.
  */
 public class Main {
-    private static StudentsList <Student> list = new StudentsList<>();
+    private static List<Student> list = new StudentsList<>();
 
     private static void parseFile(String filename) {
         try (FileReader fr = new FileReader(filename);
@@ -17,7 +18,6 @@ public class Main {
 
             while ((str=br.readLine()) != null) {
                 String[] tokens = str.split(" |=");
-                System.out.println(tokens[0]);
                 Student student = new Student(tokens[1], Integer.valueOf(tokens[3]));
                 list.add(student);
             }
