@@ -7,7 +7,7 @@ import java.util.List;
  * Created by julia on 08.12.2016.
  */
 public class IncrementCalculator {
-    static int count = 0;
+    static volatile int count = 0;
     public static void main(String[] args) {
         final Object monitor = new Object();
         List<Thread> threads = new ArrayList<>();

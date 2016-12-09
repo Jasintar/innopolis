@@ -5,13 +5,14 @@ package ru.innopolis.uni.course3.threadClassicTask;
  */
 public class Main {
     static Chronometr cloack = new Chronometr();
+    static boolean needSleep = true;
 
     public static void main(String[] args) {
 
         Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {
-                while (true) {
+                while (!Thread.interrupted()) {
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {

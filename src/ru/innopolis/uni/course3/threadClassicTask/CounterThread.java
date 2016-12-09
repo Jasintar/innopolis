@@ -14,7 +14,7 @@ public class CounterThread extends Thread implements Runnable {
 
     @Override
     public void run() {
-        while (true) {
+        while (!this.isInterrupted()) {
             synchronized(cloack) {
                 try {
                     cloack.wait();
