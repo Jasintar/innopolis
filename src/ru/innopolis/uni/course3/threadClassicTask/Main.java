@@ -5,7 +5,7 @@ package ru.innopolis.uni.course3.threadClassicTask;
  */
 public class Main {
     static Chronometr cloack = new Chronometr();
-    static boolean needSleep = true;
+//    static boolean needSleep = true;
 
     public static void main(String[] args) {
 

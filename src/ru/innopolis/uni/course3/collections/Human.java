@@ -6,10 +6,12 @@ package ru.innopolis.uni.course3.collections;
 public class Human {
     private int age;
     private String name;
+    private final int money;
 
     public Human(int age, String name) {
         this.age = age;
         this.name = name;
+        this.money = 100;
     }
 
     public int getAge() {
